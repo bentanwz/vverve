@@ -7,35 +7,59 @@
     <link rel="stylesheet" href="app/app.css">
     <link rel="stylesheet" href="app/authentication/authentication.css">
     <link rel="stylesheet" href="app/dashboard/dashboard.css">
+    <link rel="stylesheet" href="app/events/events.css">
     <link rel="stylesheet" href="app/home/home.css">
+    <link rel="stylesheet" href="app/lifestyle/lifestyle.css">
+    <link rel="stylesheet" href="app/news/news.css">
     <!-- endinjector -->
 
     <!-- bower:css -->
     <!-- endbower -->
 </head>
 <body>
-    <div ui-view></div>
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="bower_components/lodash/lodash.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <!-- endbower -->
-    <!-- injector:js -->
-    <script src="app/app.js"></script>
-    <script src="app/authentication/authentication.controller.js"></script>
-    <script src="app/authentication/authentication.js"></script>
-    <script src="app/dashboard/dashboard.controller.js"></script>
-    <script src="app/dashboard/dashboard.js"></script>
-    <script src="app/home/home.controller.js"></script>
-    <script src="app/home/home.js"></script>
-    <script src="app/main/main.js"></script>
-    <script src="components/index.js"></script>
-    <!-- endinjector -->
+<div class="container-fluid">
+    <nav class="container-fluid">
+        <div class="nav-wrapper black hoverable">
+            <a href="#" class="brand-logo">Logo</a>
+            <ul class="right hide-on-med-and-down">
+                <!-- Dropdown Trigger -->
+                <li><a ui-sref="lifestyle">Lifestyle</a></li>
+                <li><a ui-sref="events">Events</a></li>
+                <li><a ui-sref="news">News</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div class="row">
+    <div class="well" ui-view></div>
+</div>
+<!-- bower:js -->
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/lodash/lodash.js"></script>
+<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<!-- endbower -->
+<!-- injector:js -->
+<script src="app/app.js"></script>
+<script src="app/authentication/authentication.controller.js"></script>
+<script src="app/authentication/authentication.js"></script>
+<script src="app/dashboard/dashboard.controller.js"></script>
+<script src="app/dashboard/dashboard.js"></script>
+<script src="app/events/events.controller.js"></script>
+<script src="app/events/events.js"></script>
+<script src="app/home/home.controller.js"></script>
+<script src="app/home/home.js"></script>
+<script src="app/lifestyle/lifestyle.controller.js"></script>
+<script src="app/lifestyle/lifestyle.js"></script>
+<script src="app/news/news.controller.js"></script>
+<script src="app/news/news.js"></script>
+<script src="components/index.js"></script>
+<!-- endinjector -->
 
 </body>
 </html>

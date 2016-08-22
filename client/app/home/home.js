@@ -3,7 +3,7 @@ angular.module("dow")
         $stateProvider
             .state("home", {
                 url:"/",
-                templateUrl: "/app/home/home.html",
+                templateUrl: "app/home.html",
                 controller: "HomeCtrl as ctrl"
             })
     });

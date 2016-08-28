@@ -1,0 +1,39 @@
+<table class="responsive-table white-text container-fluid prospect-list" ng-controller="adminCtrl as adminCtrl">
+    <thead>
+    <tr>
+        <th data-field="id">ID</th>
+        <th data-field="firstname">First Name</th>
+        <th data-field="lastname">Last Name</th>
+        <th data-field="nric">NRIC</th>
+        <th data-field="email">Email</th>
+        <th data-field="profession">Profession</th>
+        <th data-field="profile">Profile</th>
+        <th data-field="status">Verification Status</th>
+        <th data-field="auth_code">Authorization Code</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr ng-repeat="prospect in adminCtrl.prospectsList">
+        <td>{{prospect.id}}</td>
+        <td>{{prospect.first_name}}</td>
+        <td>{{prospect.last_name}}</td>
+        <td>{{prospect.nric}}</td>
+        <td>{{prospect.email}}</td>
+        <td>{{prospect.profession}}</td>
+        <td>{{prospect.profile}}</td>
+        <td>{{prospect.status == 1 ? 'Unauthorized':'Authorized'}}</td>
+        <td>{{prospect.auth_code}}</td>
+        <td class="switch">
+            <label>
+
+                <input type="checkbox" ng-click="adminCtrl.authorize(prospect.id)" ng-checked="{{prospect.status == 1 ? 'false':'true'}}">
+                <span class="lever"></span>
+
+            </label>
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+

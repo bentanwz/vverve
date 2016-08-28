@@ -2,38 +2,188 @@
 <html lang="en" ng-app="dow">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Document</title>
     <!-- injector:css -->
+    <link rel="stylesheet" href="app/acc_reg/regaccount.css">
+    <link rel="stylesheet" href="app/admin/admin.css">
     <link rel="stylesheet" href="app/app.css">
-    <link rel="stylesheet" href="app/authentication/authentication.css">
-    <link rel="stylesheet" href="app/dashboard/dashboard.css">
     <link rel="stylesheet" href="app/events/events.css">
-    <link rel="stylesheet" href="app/home/home.css">
     <link rel="stylesheet" href="app/lifestyle/lifestyle.css">
+    <link rel="stylesheet" href="app/login/login.css">
     <link rel="stylesheet" href="app/news/news.css">
+    <link rel="stylesheet" href="app/registration/register.css">
     <!-- endinjector -->
-
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/materialize/bin/materialize.css" />
     <!-- endbower -->
 </head>
 <body>
-<div class="container-fluid">
-    <nav class="container-fluid">
-        <div class="nav-wrapper black hoverable">
-            <a href="#" class="brand-logo">Logo</a>
-            <ul class="right hide-on-med-and-down">
-                <!-- Dropdown Trigger -->
-                <li><a ui-sref="lifestyle">Lifestyle</a></li>
-                <li><a ui-sref="events">Events</a></li>
-                <li><a ui-sref="news">News</a></li>
-            </ul>
+
+<div class="container-fluid about-past">
+    <section class="nav-view">
+        <div class="container-fluid">
+            <nav class="container-fluid ">
+                <div class="nav-wrapper black hoverable" ng-controller="vConCtrl as vConCtrl">
+                    <a href="#!" class="brand-logo center"><img class="logo" src="images/verve/verve/dark_theme/verve_logo_dark_theme.png" alt="VERVE"></a>
+                    <ul class="left hide-on-med-and-down">
+                        <!-- Dropdown Trigger -->
+                        <li class="active"><a ui-sref="lifestyle">Lifestyle</a></li>
+                        <li class="active"><a ui-sref="events">Events</a></li>
+                        <li class="active"><a ui-sref="news">News</a></li>
+                        <li class="active"><a ng-click="vConCtrl.redirectToBot()" href="#">v.Concierge</a></li>
+                    </ul>
+
+                    <ul class="right hide-on-med-and-down">
+                        <!--<li class="active"><a ui-sref="about">About Us</a></li>-->
+                        <li class="active"><a ui-sref="regaccount">Register</a></li>
+                        <li class="active"><a ui-sref="login">Login</a></li>
+                        <li class="active"><a ui-sref="adminlogin">Admin</a></li>
+                        <li class="active"><a ui-sref="adminmain">Admin</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-    </nav>
+        <div class="row">
+            <div ui-view></div>
+        </div>
+
+    </section>
+
+    <section class="past-events">
+        <div class="container">
+            <h2>Past Events</h2>
+
+                <div class="card small col s3">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="images/">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
+                        <p><a href="#">This is a link</a></p>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
+
+        </div>
+
+    </section>
+
 </div>
 
-<div class="row">
-    <div class="well" ui-view></div>
+<div class="container-fluid reg-foot">
+    <section class="upcoming">
+        <div class="card-panel">
+            <h2 class="center" style="margin-left: 20px; margin-top: 10px; color: whitesmoke">Upcoming Events</h2>
+            <div class="carousel">
+                <a class="carousel-item large" href="#one!"><img src="images/lifestyle.fashion/adidas-nmd-launch-oneblockdown-nssmagazine-16.jpg"></a>
+                <a class="carousel-item" href="#two!"><img src="images/lifestyle.fashion/new-york-fashion-week-logo2.png"></a>
+                <!--<a class="carousel-item" href="#three!"><img src="images/lifestyle.fashion/runway-production.jpg></a>-->
+                <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/250/250/nature/4"></a>
+                <a class="carousel-item" href="#five!"><img src="http://lorempixel.com/250/250/nature/5"></a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="v.concierge">
+       <div class="container-fluid v-concierge">
+           <div class="container-fluid">
+               <h2 class="white-text center">Register your interest here</h2>
+               <div class="form-container" data-ng-controller="RegCtrl as ctrl2">
+                   <div class="row">
+                       <form class="col s12" name="RegForm"  ng-submit="ctrl2.register()">
+                           <div class="row">
+                               <div class="input-field col s6">
+                                   <input id="first_name" type="text" class="validate" ng-model="ctrl2.prospect.firstname" required>
+                                   <label for="first_name">First Name</label>
+                               </div>
+                               <div class="input-field col s6">
+                                   <input id="last_name" type="text" class="validate" ng-model="ctrl2.prospect.lastname" required>
+                                   <label for="last_name">Last Name</label>
+                               </div>
+                           </div>
+                           <div class="row">
+                               <div class="input-field col s6">
+                                   <input id="nric" type="number" class="validate" ng-model="ctrl2.prospect.nric" required>
+                                   <label for="nric">NRIC:</label>
+                               </div>
+                               <div class="input-field col s6">
+                                   <input id="email" type="email" class="validate" ng-model="ctrl2.prospect.email" required>
+                                   <label for="email">Email:</label>
+                               </div>
+                           </div>
+                           <div class="row">
+                               <div class="input-field col s6">
+                                   <input id="profession" type="text" class="validate" ng-model="ctrl2.prospect.profession" required>
+                                   <label for="profession">What is your profession?</label>
+                               </div>
+                           </div>
+                           <div class="row">
+                               <div class="input-field col s12">
+                                   <input type="text" id="description" class="materialize-textarea" ng-model="ctrl2.prospect.profile" required>
+                                   <label for="description">Tell us more about yourself.</label>
+                               </div>
+                           </div>
+                           <div class="row">
+                               <button class="btn waves-effect waves-light" type="submit" name="action" ng-disabled="RegForm.$invalid">Submit
+                                   <i class="material-icons right">send</i>
+                               </button>
+                           </div>
+
+                       </form>
+                   </div>
+
+               </div>
+
+
+
+           </div>
+
+       </div>
+    </section>
+
 </div>
+
+<section>
+    <footer class="page-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h2 class="white-text" id="AboutUs">About Us</h2>
+                    <p class="grey-text text-lighten-4">VVERVE is committed to building bridges between the successful and those heading towards success.</p>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h2 class="white-text">LOGO</h2>
+                    <ul>
+                        <h5><li> <a class="grey-text text-lighten-3" href="#!">Lifestyle</a></li></h5>
+                        <h5><li> <a class="grey-text text-lighten-3" href="#!">Events</a></li></h5>
+                        <h5><li> <a class="grey-text text-lighten-3" href="#!">v.Concierge</a></li></h5>
+                        <h5><li> <a class="grey-text text-lighten-3" href="#!">News</a></li></h5>
+                        <h5><li> <a class="grey-text text-lighten-3" href="#!">Register</a></li></h5>
+                        <h5><li> <a class="grey-text text-lighten-3" href="#!">Login</a></li></h5>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright copyright-bg">
+            <div class="container">
+                © 2016 Copyright
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+</section>
+
+
+<!--<div class="container-fluid">-->
+
+<!--</div>-->
 <!-- bower:js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/angular/angular.js"></script>
@@ -43,23 +193,36 @@
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="bower_components/lodash/lodash.js"></script>
 <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="bower_components/materialize/bin/materialize.js"></script>
 <!-- endbower -->
+
 <!-- injector:js -->
 <script src="app/app.js"></script>
-<script src="app/authentication/authentication.controller.js"></script>
-<script src="app/authentication/authentication.js"></script>
-<script src="app/dashboard/dashboard.controller.js"></script>
-<script src="app/dashboard/dashboard.js"></script>
+<script src="app/acc_reg/regaccount.controller.js"></script>
+<script src="app/acc_reg/regaccount.js"></script>
+<script src="app/admin/admin.controller.js"></script>
+<script src="app/admin/admin.js"></script>
+
 <script src="app/events/events.controller.js"></script>
 <script src="app/events/events.js"></script>
-<script src="app/home/home.controller.js"></script>
-<script src="app/home/home.js"></script>
 <script src="app/lifestyle/lifestyle.controller.js"></script>
 <script src="app/lifestyle/lifestyle.js"></script>
+<script src="app/login/login.controller.js"></script>
+<script src="app/login/login.js"></script>
 <script src="app/news/news.controller.js"></script>
 <script src="app/news/news.js"></script>
+<script src="app/registration/register.controller.js"></script>
+<script src="app/registration/register.js"></script>
+<script src="app/registration/register.service.js"></script>
+<script src="app/vConcierge/vConcierge.controller.js"></script>
 <script src="components/index.js"></script>
 <!-- endinjector -->
+<script>
+    $(document).ready(function(){
+        $('.carousel').carousel();
+    });
+</script>
+
 
 </body>
 </html>

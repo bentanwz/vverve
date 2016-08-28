@@ -7,7 +7,7 @@ angular.module("dow")
             })
             .state("events.nightlife",{
                 url: "/nightlife",
-                templateUrl: "app/events/events.nightlife",
+                templateUrl: "app/events/events.nightlife.html",
                 controller: "",
                 controllerAs: ""
             })

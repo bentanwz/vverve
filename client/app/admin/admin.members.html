@@ -1,0 +1,32 @@
+<div class="container-fluid" ng-controller="adminCtrl as adminCtrl">
+    <table class="responsive-table white-text prospect-list">
+        <thead>
+        <tr>
+            <!--<th data-field="id">ID</th>-->
+            <th data-field="firstname">First Name</th>
+            <th data-field="lastname">Last Name</th>
+            <th data-field="nric">NRIC</th>
+            <th data-field="email">Email</th>
+            <th data-field="profession">Profession</th>
+            <th data-field="profile">Profile</th>
+            <th data-field="dateJoined">Date Joined</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <tr ng-repeat="member in adminCtrl.members">
+            <!--<td>{{member.id}}</td>-->
+            <td>{{member.first_name}}</td>
+            <td>{{member.last_name}}</td>
+            <td>{{member.nric}}</td>
+            <td>{{member.email}}</td>
+            <td>{{member.profession}}</td>
+            <td>{{member.profile}}</td>
+            <td>{{member.dateJoined}}</td>
+        </tr>
+
+        </tbody>
+    </table>
+
+</div>
+

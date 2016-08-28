@@ -1,0 +1,58 @@
+<!--<div class="container-fluid about-past">-->
+    <!--<section class="nav-view">-->
+        <!--<div class="container-fluid">-->
+            <!--<nav class="container-fluid ">-->
+                <!--<div class="nav-wrapper black hoverable ">-->
+                    <!--<a href="#!" class="brand-logo center"><img class="logo" src="../../images/verve/verve/dark_theme/verve_logo_dark_theme.png" alt="VERVE"></a>-->
+                    <!--<ul class="left hide-on-med-and-down">-->
+                        <!--&lt;!&ndash; Dropdown Trigger &ndash;&gt;-->
+                        <!--<li class="active"><a ui-sref="adminmain.members">Members</a></li>-->
+                        <!--<li class="active"><a ui-sref="adminmain.prospects">Prospects</a></li>-->
+                    <!--</ul>-->
+
+                    <!--<ul class="right hide-on-med-and-down">-->
+                        <!--&lt;!&ndash;<li class="active"><a ui-sref="about">About Us</a></li>&ndash;&gt;-->
+                        <!--<li class="active"><a ui-sref="adminlogin">Log Out</a></li>-->
+                    <!--</ul>-->
+                <!--</div>-->
+            <!--</nav>-->
+        <!--</div>-->
+
+        <!--ASJHFBJASFKJASFKJSAGF-->
+        <!--<h1>sdfbdskfbdskf</h1>-->
+        <!--<div class="row">-->
+            <!--<div ui-view></div>-->
+        <!--</div>-->
+
+    <!--</section>-->
+<!--</div>-->
+
+<div class="card-panel news hoverable">
+    <!--<div class="divider"></div>-->
+    <ul class="navbar-header">
+        <li class="">
+            <a class="lifestyle-nav" ui-sref="adminmain.prospects" onclick="changeActive(0)">Prospects</a>
+            <a class="lifestyle-nav" ui-sref="adminmain.members" onclick="changeActive(1)">Members</a>
+            <!--<a class="lifestyle-nav" ui-sref=".health" onclick="changeActive(2)">Health</a>-->
+        </li>
+    </ul>
+</div>
+
+<div class="container-fluid">
+    <div ui-view></div>
+</div>
+
+<script>
+    var options = document.getElementsByClassName('lifestyle-nav');
+
+    function changeActive(n) {
+
+        for (var i = 0; i < options.length; i++){
+            if (i == n){
+                options[i].classList.add('sub-active');
+            } else{
+                options[i].classList.remove('sub-active');
+            }
+        }
+    }
+</script>

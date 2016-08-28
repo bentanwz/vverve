@@ -1,1 +1,30 @@
-It Works!
+<div class="card-panel hoverable">
+    <!--<div class="divider"></div>-->
+    <ul class="navbar-header">
+        <li>
+            <a class="events-nav" ui-sref=".nightlife" onclick="changeActive(0)">Nightlife</a>
+            <a class="events-nav" ui-sref=".fashion" onclick="changeActive(1)">Fashion</a>
+            <a class="events-nav" ui-sref=".cuisine" onclick="changeActive(2)">Cuisine</a>
+            <a class="events-nav" ui-sref=".health" onclick="changeActive(3)">Networking</a>
+        </li>
+    </ul>
+</div>
+
+<div class="container-fluid">
+    <div ui-view></div>
+</div>
+
+<script>
+    var options = document.getElementsByClassName('events-nav');
+
+    function changeActive(n) {
+
+        for (var i = 0; i < options.length; i++){
+            if (i == n){
+                options[i].classList.add('sub-active');
+            } else{
+                options[i].classList.remove('sub-active');
+            }
+        }
+    }
+</script>

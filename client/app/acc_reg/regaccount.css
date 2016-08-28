@@ -1,0 +1,9 @@
+.form-container{
+    background-color: rgba(5,5,5,0.75);
+    width: 60%;
+    margin-left: 17em;
+}
+
+form{
+    color: whitesmoke;
+}

@@ -5267,7 +5267,7 @@ button.btn-floating {
 }
 
 .waves-block {
-  display: block;
+  display: inline-block;
 }
 
 /* Firefox Bug: link not triggered */

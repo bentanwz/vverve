@@ -13,6 +13,7 @@ module.exports = function (app) {
     app.use(passport.session());
 
     passport.serializeUser(function (username, done) {
+        console.info("username > " + username);
         done(null, username)
     });
 

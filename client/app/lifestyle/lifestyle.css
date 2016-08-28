@@ -1,0 +1,20 @@
+p{
+    font-size: 150%;
+}
+
+.lifestyle-nav {
+    /*position: static;*/
+    padding-left: 0.8em;
+    margin:0;
+    /*background-color: #fff;*/
+    color: whitesmoke;
+    text-transform: uppercase;
+    font-size: 130%;
+}
+.card{
+    background-color: rgba(255,255,255,0.5);
+}
+
+.sub-active{
+    text-decoration: underline;
+}

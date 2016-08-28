@@ -8,9 +8,6 @@ angular.module("dow")
             .state("lifestyle.fashion", {
                 url: "/fashion",
                 templateUrl: "app/lifestyle/lifestyle.fashion.html",
-                controller: function ($scope) {
-                    $scope.items = ["A", "List", "Of", "Items"];
-                },
                 controllerAs: ""
             })
             .state("lifestyle.cuisine", {

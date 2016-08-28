@@ -1,0 +1,75 @@
+@font-face {
+    font-family: Dense-Thin;
+    src: url(../fonts/Dense-Thin.otf);
+    font-size: 48px;
+}
+
+body{
+    font-family: 'Dense-Thin','Helvetica Neue',Arial,sans-serif;
+    /*font-size: 120% ;*/
+    background-color: black;
+}
+
+section.nav-view{
+    height: 700px;
+}
+
+section.past-events{
+    /*background-image: url("../images/background/past_events.jpg");*/
+    height: 700px;
+    background-color: black;
+    opacity: 0.85;
+    color: whitesmoke;
+    padding-top: 0.5em;
+    font-size: larger;
+    text-align: center;
+}
+
+section.upcoming{
+    height: 490px;
+}
+.about-past{
+    background-image: url("../images/background/nightlife-in-africa.jpg");
+}
+.carousel{
+    padding: 0;
+}
+.reg-foot{
+    background-image: url("../images/background/Newyork.jpg");
+}
+
+.v-concierge{
+    height: 600px;
+    background-color: black;
+    opacity: 0.95;
+    color: whitesmoke;
+    padding-top: 2px;
+
+}
+.logo{
+    display: block;
+    max-width: 300px;
+    max-height: 100px;
+    padding-top: 10px;
+}
+
+.nav .ul .a {
+    font-size: 40px;
+}
+.nav-font{
+    font-size: 120%;
+}
+.navbar{
+    background-color: rgba(0,0,0,0.6);
+}
+
+.page-footer-bg{
+    background-color: black;
+}
+.copyright-bg{
+    background-color: black;
+}
+
+.nav.active{
+    background-color: whitesmoke;
+}

@@ -31,6 +31,12 @@ section.upcoming{
 .about-past{
     background-image: url("../images/background/nightlife-in-africa.jpg");
 }
+
+.card{
+    display: compact;
+    margin: auto;
+    /*width: 40%;*/
+}
 .carousel{
     padding: 0;
 }

@@ -118,6 +118,7 @@ module.exports = function (grunt) {
                     '<%= yeoman.client %>/index.html': [
                         [
                             '<%= yeoman.client %>/{app,components}/**/*.js',
+                            '!<%= yeoman.client %>/app/app.js',
                         ]
                     ]
                 }

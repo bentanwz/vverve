@@ -91,7 +91,7 @@ function adminCtrl(dbSvc, $http,$state,$location) {
             password: vm.password
         }).then(function () {
             console.log("Login OK");
-            $state.go("adminlogin.prospects");
+            $state.go("adminmain");
             // $location.url("app/admin/admin.main.html");
         }).catch(function (err) {
             console.log(err);
